@@ -22,7 +22,7 @@ class App extends React.Component {
         event.preventDefault();
         const city = event.target.elements.city.value;
         const country = event.target.elements.country.value;
-        var url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`;
+        var url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`;
 
         var fetchCall = await fetch(url).then((data)=>{
             if (data.status >= 200 && data.status < 300)   return data; else alert("enter correct info")
